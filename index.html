@@ -25,9 +25,9 @@
                 <div class="card">
                   <img class="img-top fluid" src="./img/player/player-1.png" alt="">
                   <div class="card-body text-center">
-                    <h5 class="card-text">Player Name</h5>
+                    <h5 class="card-text" id="messi">Lionel Messi</h5>
                     <p class="text-muted">36 Goals . 120 Assist</p>
-                    <button class="btn btn-primary w-100">SELECT</button>
+                    <button id="messi-btn" class="btn btn-primary w-100">SELECT</button>
                   </div>
                 </div>
               </div>
@@ -36,9 +36,9 @@
                 <div class="card">
                   <img class="img-top fluid" src="./img/player/player-2.png" alt="">
                   <div class="card-body text-center">
-                    <h5 class="card-text">Player Name</h5>
+                    <h5 class="card-text" id="neymar">Neymar Jr</h5>
                     <p class="text-muted">36 Goals . 120 Assist</p>
-                    <button class="btn btn-primary w-100">SELECT</button>
+                    <button id="neymar-btn" class="btn btn-primary w-100">SELECT</button>
                   </div>
                 </div>
               </div>
@@ -47,9 +47,9 @@
                 <div class="card">
                   <img class="img-top fluid" src="./img/player/player-3.png" alt="">
                   <div class="card-body text-center">
-                    <h5 class="card-text">Player Name</h5>
+                    <h5 class="card-text" id="Mbappe">Kylian Mbappé</h5>
                     <p class="text-muted">36 Goals . 120 Assist</p>
-                    <button class="btn btn-primary w-100">SELECT</button>
+                    <button id="Mbappe-btn" class="btn btn-primary w-100">SELECT</button>
                   </div>
                 </div>
               </div>
@@ -58,9 +58,9 @@
                 <div class="card">
                   <img class="img-top fluid" src="./img/player/player-4.png" alt="">
                   <div class="card-body text-center">
-                    <h5 class="card-text">Player Name</h5>
+                    <h5 class="card-text" id="Machado">Vítor Machado</h5>
                     <p class="text-muted">36 Goals . 120 Assist</p>
-                    <button class="btn btn-primary w-100">SELECT</button>
+                    <button id="Machado-btn" class="btn btn-primary w-100">SELECT</button>
                   </div>
                 </div>
               </div>
@@ -69,9 +69,9 @@
                 <div class="card">
                   <img class="img-top fluid" src="./img/player/player-5.png" alt="">
                   <div class="card-body text-center">
-                    <h5 class="card-text">Player Name</h5>
+                    <h5 class="card-text" id="Ramos">Sergio Ramos</h5>
                     <p class="text-muted">36 Goals . 120 Assist</p>
-                    <button class="btn btn-primary w-100">SELECT</button>
+                    <button id="Ramos-btn" class="btn btn-primary w-100">SELECT</button>
                   </div>
                 </div>
               </div>
@@ -80,9 +80,9 @@
                 <div class="card">
                   <img class="img-top fluid" src="./img/player/player-6.png" alt="">
                   <div class="card-body text-center">
-                    <h5 class="card-text">Player Name</h5>
+                    <h5 class="card-text" id="Renato">Renato Sanches</h5>
                     <p class="text-muted">36 Goals . 120 Assist</p>
-                    <button class="btn btn-primary w-100">SELECT</button>
+                    <button id="Renato-btn" class="btn btn-primary w-100">SELECT</button>
                   </div>
                 </div>
               </div>
@@ -93,11 +93,7 @@
             <!-- select -->
             <div class="mb-4 p-3 border text-white rounded">
               <h4 class="text-center bold">Selected - V</h4>
-              <ol>
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
-                <li>Name</li>
+              <ol id="playerList">
                 <li>Name</li>
               </ol>
             </div>
@@ -107,31 +103,31 @@
 
               <div class="mb-3 input-group">
                 <p class="me-4">Per Player</p>
-                <input id="" class="ps-2 form-control rounded" type="text" placeholder="1000">
+                <input id="per-player-budget" class="ps-2 form-control rounded" type="text" placeholder="1000">
               </div>
 
-              <button id="" class="btn btn-primary w-100 mb-4">Calculate</button>
+              <button id="Calculate" class="btn btn-primary w-100 mb-4">Calculate</button>
 
               <div class="d-flex">
                 <p class="me-3">Player Expenses:</p>
-                <p>$<span id="">5000</span></p>
+                <p>$<span id="player-expenses" class="ms-2">5000</span></p>
               </div> 
 
               <div class="mb-3 input-group">
                 <p class="me-4">Manager</p>
-                <input class="ps-2 form-control rounded" type="text" placeholder="2000">
+                <input id="manager-salary" class="ps-2 form-control rounded" type="text" placeholder="2000">
               </div>
 
               <div class="mb-3 input-group">
                 <p class="me-5">Coach</p>
-                <input class="ps-2 form-control rounded" type="text" placeholder="4000">
+                <input id="coach-salary" class="ps-2 form-control rounded" type="text" placeholder="4000">
               </div>
 
-              <button class="btn btn-primary w-100 mb-4">Calculate Total</button>
+              <button id="calculate-total" class="btn btn-primary w-100 mb-4">Calculate Total</button>
 
               <div class="d-flex">
                 <p class="me-5">Total:</p>
-                <p class="ms-5">$<span id="">11000</span></p>
+                <p class="ms-5">$<span id="total-salary" class="ms-2">11000</span></p>
               </div> 
             </div>
           </div>
