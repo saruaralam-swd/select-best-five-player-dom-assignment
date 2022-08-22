@@ -1,13 +1,43 @@
-document.getElementById('messi-btn').addEventListener('click', function() {
-  const playerName = document.getElementById('messi');
+function playerSelected(nameId, btnId) {
+  const playerName = document.getElementById(nameId);
   const playerNameText = playerName.innerText;
   
   const ol = document.getElementById('playerList');
   const li = document.createElement('li');
   li.innerText = playerNameText;
-  ol.appendChild(li);
 
-  document.getElementById('messi-btn').setAttribute('disabled', true);
+  const selectedList = document.getElementById('playerList');
+  if (selectedList.children.length + 1 > 5){
+    alert("Your team is full");
+    return;
+  }
+
+  ol.appendChild(li);
+  document.getElementById(btnId).setAttribute('disabled', true);
+}
+
+document.getElementById('messi-btn').addEventListener('click', function() {
+  playerSelected('messi', 'messi-btn');
+});
+
+document.getElementById('neymar-btn').addEventListener('click', function() {
+  playerSelected('neymar', 'neymar-btn');
+});
+
+document.getElementById('Mbappe-btn').addEventListener('click', function() {
+  playerSelected('Mbappe', 'Mbappe-btn');
+});
+
+document.getElementById('Machado-btn').addEventListener('click', function() {
+  playerSelected('Machado', 'Machado-btn');
+});
+
+document.getElementById('Ramos-btn').addEventListener('click', function() {
+  playerSelected('Ramos', 'Ramos-btn');
+});
+
+document.getElementById('Renato-btn').addEventListener('click', function() {
+  playerSelected('Renato', 'Renato-btn');
 });
 
 
