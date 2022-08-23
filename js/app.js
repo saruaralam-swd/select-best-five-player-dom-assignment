@@ -1,13 +1,32 @@
+const friend = [
+  {btnId: "messi-btn", nameId: "messi"},
+  {btnId: "neymar-btn", nameId: "neymar"},
+  {btnId: "Mbappe-btn", nameId: "Mbappe"},
+  {btnId: "Machado-btn", nameId: "Machado"},
+  {btnId: "Ramos-btn", nameId: "Ramos"},
+  {btnId: "Renato-btn", nameId: "Renato"},
+];
+
+for (const x of friend) {
+  addEvent(x.btnId, x.nameId)
+}
+
+function addEvent(btnId, nameId) {
+  document.getElementById(btnId).addEventListener('click', function () {
+    playerSelected(nameId, btnId);
+  });
+}
+
 function playerSelected(nameId, btnId) {
   const playerName = document.getElementById(nameId);
   const playerNameText = playerName.innerText;
-  
+
   const ol = document.getElementById('playerList');
   const li = document.createElement('li');
   li.innerText = playerNameText;
 
   const selectedList = document.getElementById('playerList');
-  if (selectedList.children.length + 1 > 5){
+  if (selectedList.children.length + 1 > 5) {
     alert("Your team is full");
     return;
   }
@@ -16,32 +35,8 @@ function playerSelected(nameId, btnId) {
   document.getElementById(btnId).setAttribute('disabled', true);
 }
 
-document.getElementById('messi-btn').addEventListener('click', function() {
-  playerSelected('messi', 'messi-btn');
-});
 
-document.getElementById('neymar-btn').addEventListener('click', function() {
-  playerSelected('neymar', 'neymar-btn');
-});
-
-document.getElementById('Mbappe-btn').addEventListener('click', function() {
-  playerSelected('Mbappe', 'Mbappe-btn');
-});
-
-document.getElementById('Machado-btn').addEventListener('click', function() {
-  playerSelected('Machado', 'Machado-btn');
-});
-
-document.getElementById('Ramos-btn').addEventListener('click', function() {
-  playerSelected('Ramos', 'Ramos-btn');
-});
-
-document.getElementById('Renato-btn').addEventListener('click', function() {
-  playerSelected('Renato', 'Renato-btn');
-});
-
-
-document.getElementById('Calculate').addEventListener('click', function() {
+document.getElementById('Calculate').addEventListener('click', function () {
   const budgetFieldElement = document.getElementById('per-player-budget');
   const budgetString = budgetFieldElement.value;
   const budget = parseInt(budgetString);
@@ -51,7 +46,7 @@ document.getElementById('Calculate').addEventListener('click', function() {
   document.getElementById('player-expenses').innerText = ol.children.length * budget;
 });
 
-document.getElementById('calculate-total').addEventListener('click', function() {
+document.getElementById('calculate-total').addEventListener('click', function () {
   const managerInputField = document.getElementById('manager-salary');
   const managerInputString = managerInputField.value;
   const managerSalary = parseInt(managerInputString);
