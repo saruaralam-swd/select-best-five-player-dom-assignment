@@ -1,3 +1,4 @@
+// Total Players
 const friend = [
   {btnId: "messi-btn", nameId: "messi"},
   {btnId: "neymar-btn", nameId: "neymar"},
@@ -17,6 +18,7 @@ function addEvent(btnId, nameId) {
   });
 }
 
+// team create of selected players
 function playerSelected(nameId, btnId) {
   const playerName = document.getElementById(nameId);
   const playerNameText = playerName.innerText;
@@ -35,6 +37,7 @@ function playerSelected(nameId, btnId) {
   document.getElementById(btnId).setAttribute('disabled', true);
 }
 
+// input field: string to number
 function getValueById(id) {
   const element = document.getElementById(id);
   const valueString = element.value;
@@ -42,23 +45,25 @@ function getValueById(id) {
   return valueNumber;
 }
 
+// calculate selected total player expenses
 document.getElementById('Calculate').addEventListener('click', function () {
   const perPlayerBudget = getValueById('per-player-budget');
 
   const ol = document.getElementById('playerList');
   const selectPlayerList = ol.children;
-  const selectTotalPlayer =  selectPlayerList.length;
+  const totalSelectedPlayer =  selectPlayerList.length;
 
-  document.getElementById('player-expenses').innerText = selectTotalPlayer * perPlayerBudget;
+  document.getElementById('player-expenses').innerText = totalSelectedPlayer * perPlayerBudget;
 });
 
+// calculate total salary
 document.getElementById('calculate-total').addEventListener('click', function () {
   const managerSalary = getValueById('manager-salary');
 
   const coachSalary = getValueById('coach-salary');
 
   const playerExpensesValue = document.getElementById('player-expenses').innerText;
-  const playerExpenses = parseInt(playerExpensesValue)
+  const selectedTotalPlayerSalary = parseInt(playerExpensesValue);
 
-  document.getElementById('total-salary').innerText = managerSalary + coachSalary + playerExpenses;
+  document.getElementById('total-salary').innerText = managerSalary + coachSalary + selectedTotalPlayerSalary;
 });
