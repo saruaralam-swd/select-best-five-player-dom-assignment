@@ -35,29 +35,30 @@ function playerSelected(nameId, btnId) {
   document.getElementById(btnId).setAttribute('disabled', true);
 }
 
+function getValueById(id) {
+  const element = document.getElementById(id);
+  const valueString = element.value;
+  const valueNumber = parseInt(valueString);
+  return valueNumber;
+}
 
 document.getElementById('Calculate').addEventListener('click', function () {
-  const budgetFieldElement = document.getElementById('per-player-budget');
-  const budgetString = budgetFieldElement.value;
-  const budget = parseInt(budgetString);
+  const perPlayerBudget = getValueById('per-player-budget');
 
   const ol = document.getElementById('playerList');
+  const selectPlayerList = ol.children;
+  const selectTotalPlayer =  selectPlayerList.length;
 
-  document.getElementById('player-expenses').innerText = ol.children.length * budget;
+  document.getElementById('player-expenses').innerText = selectTotalPlayer * perPlayerBudget;
 });
 
 document.getElementById('calculate-total').addEventListener('click', function () {
-  const managerInputField = document.getElementById('manager-salary');
-  const managerInputString = managerInputField.value;
-  const managerSalary = parseInt(managerInputString);
+  const managerSalary = getValueById('manager-salary');
 
-  const coachInputField = document.getElementById('coach-salary');
-  const coachInputString = coachInputField.value;
-  const coachSalary = parseInt(coachInputString);
+  const coachSalary = getValueById('coach-salary');
 
   const playerExpensesValue = document.getElementById('player-expenses').innerText;
   const playerExpenses = parseInt(playerExpensesValue)
-
 
   document.getElementById('total-salary').innerText = managerSalary + coachSalary + playerExpenses;
 });
