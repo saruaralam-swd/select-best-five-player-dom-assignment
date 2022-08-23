@@ -1,3 +1,8 @@
 body{
  background-color: #1E2B47; 
 }
+
+.img-size {
+  height: 200px;
+  object-fit: cover;
+} 
