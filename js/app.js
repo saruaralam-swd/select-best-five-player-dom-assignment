@@ -31,7 +31,7 @@ function playerSelected(nameId, btnId) {
   li.innerText = playerNameText;
 
   const selectedList = document.getElementById('playerList');
-  if (selectedList.children.length + 1 > 5) {
+  if (selectedList.children.length > 4) {
     alert("Your team is full");
     return;
   }
@@ -44,6 +44,14 @@ function playerSelected(nameId, btnId) {
 function getValueById(id) {
   const element = document.getElementById(id);
   const valueString = element.value;
+  if (valueString === '') {
+    alert('Your input field empty');
+    return false;
+  }
+  if(isNaN(valueString) || valueString < 0){
+    alert("please type valid number")
+    return false;
+  }
   const valueNumber = parseInt(valueString);
   return valueNumber;
 }
@@ -51,7 +59,7 @@ function getValueById(id) {
 // calculate selected total player expenses
 document.getElementById('Calculate').addEventListener('click', function () {
   const perPlayerBudget = getValueById('per-player-budget');
-
+  
   const ol = document.getElementById('playerList');
   const selectPlayerList = ol.children;
   const totalSelectedPlayer =  selectPlayerList.length;

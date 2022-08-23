@@ -1,8 +1,30 @@
-body{
- background-color: #1E2B47; 
+body {
+  max-width: 1400px;
+  margin: auto;
+}
+
+#header {
+  background-color: #020F2A;
+  height: 400px;
+  background-image: url("../img/header/logo.png");
+  background-repeat: no-repeat;
+  
+}
+
+main {
+  background-color: #020F2A;
+}
+
+#header h1 {
+  font-size: 50px;
 }
 
 .img-size {
   height: 200px;
   object-fit: cover;
-} 
+}
+
+footer{
+  border-top: 2px solid white;
+  background-color: #020F2A;
+}
