@@ -6,10 +6,6 @@ body {
 #header {
   background-color: #020F2A;
   min-height: 500px;
-  /* background-image: url("../img/header/header-bg.avif"), url("../img/header/logo.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center top, left top; */
-
   background-image: url("../img/header/logo.png"), url("../img/header/header-bg.avif");
   background-repeat: no-repeat, no-repeat;
   background-position: left top, left top;
