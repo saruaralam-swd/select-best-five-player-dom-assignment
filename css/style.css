@@ -5,22 +5,22 @@ body {
 
 #header {
   background-color: #020F2A;
-  height: 500px;
-  background-image: url("../img/header/header-bg.avif");
-  background-repeat: no-repeat;
+  min-height: 500px;
+  /* background-image: url("../img/header/header-bg.avif"), url("../img/header/logo.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: center top, left top; */
+
+  background-image: url("../img/header/logo.png"), url("../img/header/header-bg.avif");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left top, left top;
 }
 
-main {
+main{
   background-color: #020F2A;
 }
 
 #header h1 {
   font-size: 50px;
-}
-
-.img-size {
-  height: 200px;
-  object-fit: cover;
 }
 
 footer{
