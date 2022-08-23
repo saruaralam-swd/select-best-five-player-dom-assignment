@@ -6,6 +6,9 @@ const friend = [
   {btnId: "Machado-btn", nameId: "Machado"},
   {btnId: "Ramos-btn", nameId: "Ramos"},
   {btnId: "Renato-btn", nameId: "Renato"},
+  {btnId: "Mesut-btn", nameId: "Mesut"},
+  {btnId: "Karim-btn", nameId: "Karim"},
+  {btnId: "Mohammed-btn", nameId: "Mohammed"},
 ];
 
 for (const x of friend) {
