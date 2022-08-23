@@ -5,10 +5,9 @@ body {
 
 #header {
   background-color: #020F2A;
-  height: 400px;
-  background-image: url("../img/header/logo.png");
+  height: 500px;
+  background-image: url("../img/header/header-bg.avif");
   background-repeat: no-repeat;
-  
 }
 
 main {

@@ -21,7 +21,7 @@ function addEvent(btnId, nameId) {
   });
 }
 
-// team create of selected players
+// team create
 function playerSelected(nameId, btnId) {
   const playerName = document.getElementById(nameId);
   const playerNameText = playerName.innerText;
@@ -40,12 +40,12 @@ function playerSelected(nameId, btnId) {
   document.getElementById(btnId).setAttribute('disabled', true);
 }
 
-// input field: string to number
+// input field value validation
 function getValueById(id) {
   const element = document.getElementById(id);
   const valueString = element.value;
   if (valueString === '') {
-    alert('Your input field empty');
+    alert('Please enter a number');
     return false;
   }
   if(isNaN(valueString) || valueString < 0){
@@ -60,9 +60,7 @@ function getValueById(id) {
 document.getElementById('Calculate').addEventListener('click', function () {
   const perPlayerBudget = getValueById('per-player-budget');
   
-  const ol = document.getElementById('playerList');
-  const selectPlayerList = ol.children;
-  const totalSelectedPlayer =  selectPlayerList.length;
+  const totalSelectedPlayer = document.getElementById('playerList').children.length;
 
   document.getElementById('player-expenses').innerText = totalSelectedPlayer * perPlayerBudget;
 });
@@ -74,7 +72,7 @@ document.getElementById('calculate-total').addEventListener('click', function ()
   const coachSalary = getValueById('coach-salary');
 
   const playerExpensesValue = document.getElementById('player-expenses').innerText;
-  const selectedTotalPlayerSalary = parseInt(playerExpensesValue);
+  const playerExpenses = parseInt(playerExpensesValue);
 
-  document.getElementById('total-salary').innerText = managerSalary + coachSalary + selectedTotalPlayerSalary;
+  document.getElementById('total-salary').innerText = managerSalary + coachSalary + playerExpenses;
 });
