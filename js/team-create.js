@@ -38,6 +38,7 @@ function playerSelected(nameId, btnId) {
 
   ol.appendChild(li);
   document.getElementById(btnId).setAttribute('disabled', true);
+  document.getElementById(btnId).style.backgroundColor = 'gray';
 }
 
 // input field value validation
